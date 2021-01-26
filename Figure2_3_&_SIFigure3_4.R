@@ -1,6 +1,6 @@
 #### Description: this script produces manuscript Figures2 and 3 
 #### "clusters.csv" used in script "Associations", Kruskal-Wallis 
-#### test and cluster number choice justification 
+#### test and cluster number choice justification-SI Figure 3&4
 #### INPUT: "database.xlsx" 
 #### OUTPUT: "clusters.csv" and manuscript Figures2 and 3
 #### Date: 25/05/2020
