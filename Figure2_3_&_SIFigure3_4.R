@@ -78,7 +78,8 @@ jpeg("Figure2.jpeg",
 ggplot(database, aes(ymax = ymax, ymin = ymin, xmax = 4, xmin = 3, fill = response)) +
   geom_rect() +
   geom_text(x = 3.5, aes(y = labelPosition, label = label), size = 5) +
-  scale_fill_brewer(palette = 4) +
+  #scale_fill_brewer(palette = 4) + #less obvious palette
+  scale_fill_manual(values = c("#a6cee3", "#1f78b4", "#b2df8a", "#33a02c", "dimgrey")) +
   coord_polar(theta="y") +
   xlim(c(2, 4)) +
   theme_void() +
@@ -116,7 +117,8 @@ dend_r <- color_branches(dend_r, k = 2, col = c("plum4", "plum")) #OR 3
 #dend_c <- hclust(daisy(t(m), metric = "gower"), method = meth)
 dend_r <- set(dend_r, "branches_lwd", 3)
 
-myP <- brewer.pal(n = 5, name = 'GnBu')
+#myP <- brewer.pal(n = 5, name = 'GnBu') #less obvious palette
+myP <- c("#a6cee3", "#1f78b4", "#b2df8a", "#33a02c", "dimgrey")
 
 #4.Save Figure3####
 jpeg("Figure3.jpeg", 
@@ -125,7 +127,6 @@ h <- Heatmap(m, name = "mat",
         cluster_columns = F, #dend_c,
         cluster_rows = dend_r, 
         row_split = 2,
-        #column_dend_reorder = c(1:5),
         col = myP,
         heatmap_legend_param = list(legend_direction = "horizontal",
                                     labels = c(resp_levels), 
