@@ -137,7 +137,7 @@ h <- Heatmap(m, name = "mat",
         column_names_gp = gpar(fontsize = 13),
         row_names_gp = gpar(fontsize = 12),
         column_names_rot = 360, column_names_centered = T,
-        column_title = 'Hypothetical cenarios',
+        column_title = 'Hypothetical scenarios',
         column_title_side = "bottom",
         row_names_side = "left"
         )
