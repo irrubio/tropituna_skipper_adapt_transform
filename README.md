@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository allows to replicate results from the article *Adaptation and transformation responses to climate change impacts in a large-scale tuna fishery*. The scripts in Figure 1 produce figures from the manuscript.
+This repository allows to replicate results from the article *Skippers’ preferred adaptation and transformation responses to catch declines in a large-scale tuna fishery*. The scripts in Figure 1 produce figures from the manuscript.
 
 ![](Images/outline_scripts.jpg)
 
