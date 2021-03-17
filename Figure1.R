@@ -55,7 +55,7 @@ total$change_react <- factor(total$change_react, levels = total$change_react[ord
 
 #2.Save Figure1####
 jpeg("Figure1.jpeg", 
-    width = 11, height = 6, units = 'in', res = 300)
+     width = 170, height = 100, units = 'mm', res = 300)
 ggplot(total, aes(x = change_react,
                  y = perc)) + 
   geom_bar(stat = "identity") +
@@ -64,10 +64,10 @@ ggplot(total, aes(x = change_react,
   ylab("% of skippers") +
   theme_bw() +
   theme(legend.title = element_blank(),
-        legend.text = element_text(size = 23),
+        legend.text = element_text(size = 14),
         legend.key.height = unit(0.7, "cm"),
-        axis.text = element_text(size = 23, color = "black"),
-        axis.title = element_text(size = 23),
-        strip.text = element_text(size = 23),
-        plot.title = element_text(size = 23)) 
+        axis.text = element_text(size = 14, color = "black"),
+        axis.title = element_text(size = 14),
+        strip.text = element_text(size = 14),
+        plot.title = element_text(size = 14)) 
 dev.off()

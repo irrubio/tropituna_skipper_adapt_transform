@@ -74,19 +74,19 @@ database$response <- factor(database$response, levels = resp_levels)
 
 #2.Save Figure2####
 jpeg("Figure2.jpeg", 
-    width = 12, height = 4, units = 'in', res = 300)
+    width = 170, height = 80, units = 'mm', res = 300)
 ggplot(database, aes(ymax = ymax, ymin = ymin, xmax = 4, xmin = 3, fill = response)) +
   geom_rect() +
-  geom_text(x = 3.5, aes(y = labelPosition, label = label), size = 5) +
+  geom_text(x = 3.5, aes(y = labelPosition, label = label), size = 4) +
   #scale_fill_brewer(palette = 4) + #less obvious palette
   scale_fill_manual(values = c("#a6cee3", "#1f78b4", "#b2df8a", "#33a02c", "dimgrey")) +
   coord_polar(theta="y") +
   xlim(c(2, 4)) +
   theme_void() +
-  theme(strip.text = element_text(size = 20),
+  theme(strip.text = element_text(size = 14),
         legend.position = "bottom",
-        legend.text = element_text(size = 18),
-        legend.title = element_text(size = 18)) +
+        legend.text = element_text(size = 11),
+        legend.title = element_text(size = 11)) +
   guides(fill = guide_legend(title = "Response:")) +
   facet_wrap(~variable, ncol = 5)
 dev.off()
@@ -122,7 +122,7 @@ myP <- c("#a6cee3", "#1f78b4", "#b2df8a", "#33a02c", "dimgrey")
 
 #4.Save Figure3####
 jpeg("Figure3.jpeg", 
-    width = 8, height = 6, units = 'in', res = 600)
+    width = 170, height = 130, units = 'mm', res = 600)
 h <- Heatmap(m, name = "mat", 
         cluster_columns = F, #dend_c,
         cluster_rows = dend_r, 
